@@ -1,0 +1,2549 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.pagina-port {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+
+    background: #efefef;
+}
+
+.pagina-contato {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.pagina-servicos {
+    background: #0a0826;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+
+.center-serv,
+.center-port,
+.center-sobre,
+.center {
+    margin: 0 100px;
+}
+
+.center-contato {
+    margin: 50px 100px;
+}
+
+h1,
+.menu,
+.formulario input,
+.formulario textarea,
+.servBase2,
+.robotoBold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.noto {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.site {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    padding: 0 40px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+header div div:first-child a {
+    text-decoration: none;
+}
+
+header .site {
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    align-items: center;
+}
+
+header div div :nth-child(2) {
+    display: flex;
+    align-items: center;
+    flex-grow: 2;
+}
+
+header h1 {
+    font-size: 1.5em;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    margin-left: 45px;
+    cursor: pointer;
+}
+
+header h1::before {
+    margin: auto 0;
+    content: '';
+    position: absolute;
+    left: -45px;
+    width: 40px;
+    height: 40px;
+    background: url(../img/logo.png) no-repeat center;
+    background-size: cover;
+}
+
+header .menu {
+    align-items: center;
+    display: flex;
+    width: 62.5%;
+    justify-content: end;
+    margin: 20px 30px;
+}
+
+header .menu ul {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.menu ul li {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: var(--animation-delay);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu ul li:nth-child(1) {
+    --animation-delay: 0s;
+}
+
+.menu ul li:nth-child(2) {
+    --animation-delay: 0.05s;
+}
+
+.menu ul li:nth-child(3) {
+    --animation-delay: 0.2s;
+}
+
+.menu ul li:nth-child(4) {
+    --animation-delay: 0.35s;
+}
+
+.menu ul li:nth-child(5) {
+    --animation-delay: 0.5s;
+}
+
+.robotoBold {
+    opacity: 0;
+    animation: fadeInUp 0.4s ease-out forwards;
+    animation-delay: 0.7s;
+}
+
+header .menu ul li a {
+    align-items: center;
+    text-decoration: none;
+    color: #eaeaea;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    transition: width 0.8s ease-out;
+    color: #fff;
+}
+
+.menu ul li a:hover::after,
+.menu ul li a.ativo::after {
+    color: #fff;
+    width: 100%;
+}
+
+.menu ul li a:hover,
+.menu ul li a.ativo {
+    color: #fff;
+}
+
+header button {
+    height: 40px;
+    width: 90px;
+    border: 3px #eaeaea solid;
+    color: #eaeaea;
+    background: none;
+    font-size: 1.15em;
+    border-radius: 25px;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: background ease 0.5s, letter-spacing ease 1s, border-radius ease 1s;
+}
+
+header button:hover {
+    border-radius: 10px;
+    border: 3.5px #fff solid;
+    color: #fff;
+    letter-spacing: 1.5px;
+    background: rgb(255, 255, 255, 0.25);
+}
+
+.abrir-menu {
+    display: none;
+}
+
+.fechar-menu {
+    display: none;
+}
+
+
+/* variações do topo */
+
+
+/* SOBRE */
+
+.topo-sobre {
+    background: #041032;
+}
+
+/* SERVIÇOS */
+.topo-servicos {
+    background: #efefef;
+}
+
+.topo-servicos h1 {
+    color: #0a0826;
+}
+
+.topo-servicos h1::before {
+    background: url(../img/logoDark.png) no-repeat center;
+    background-size: cover;
+}
+
+.topo-servicos .menu ul li a {
+    color: #0a0826;
+}
+
+.topo-servicos .menu ul li a::after {
+    background: #0a0826;
+    color: #0a0826;
+}
+
+.topo-servicos .menu ul li a:hover::after,
+.topo-servicos .menu ul li a.ativo::after {
+    color: #0a0826;
+    width: 100%;
+}
+
+.topo-servicos .menu ul li a:hover,
+.topo-servicos .menu ul li a.ativo {
+    color: #0a0826;
+}
+
+.topo-servicos button {
+    border: 3px #0a0826 solid;
+    color: #0a0826;
+}
+
+.topo-servicos button:hover {
+    border: 3.5px #0a0826 solid;
+    color: #0a0826;
+    background: rgb(255, 255, 255, 0.25);
+}
+
+.topo-port {
+    background: #bf0600;
+}
+
+.topoPort div div {
+    margin: 50px 0;
+}
+
+.topoPort .site div h2 {
+    color: #000;
+    font-size: 2.5em;
+}
+
+.topoPort .site div>h2::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: #000;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.topoPort h3 {
+    font-size: 1.6875em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.topoPort p {
+    font-size: 1.25em;
+    text-align: justify;
+}
+
+.galeriaPort {
+    margin: 100px 0;
+}
+
+.galeriaPort .site {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galeriaPort img {
+    margin: 25px 37.5px;
+    width: 25%;
+}
+
+.topo-contato {
+    background: #041032;
+}
+
+.contato-cntt {
+    margin: 100px 0;
+}
+
+.contato-cntt h2 {
+    color: #0a0826;
+    font-size: 2.5em;
+}
+
+.contato-cntt h2::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: #011826;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.box-cntt {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.box-cntt div {
+    display: flex;
+    justify-content: center;
+    width: 41.66666666666667%;
+    align-items: center;
+    box-shadow: 5px 10px 8px #888888;
+    border-radius: 30px;
+    border: 1px solid #041032;
+    transition: .3s;
+}
+
+.box-cntt a {
+    color: #041032;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.box-cntt a:hover {
+    text-decoration: underline;
+}
+
+.box-cntt div:hover {
+    box-shadow: 5px 10px 8px #888888;
+    transform: translateY(-5px);
+}
+
+.box-cntt p {
+    font-size: 1.875em;
+}
+
+.box-cntt img {
+    margin: 15px 20px;
+}
+
+.contato-cntt h3 {
+    text-align: center;
+    font-size: 2.25em;
+    margin: 50px 0;
+}
+
+.contato-cntt .site>div:last-child p {
+    font-size: 1.375em;
+    text-align: center;
+}
+
+.cont-cntt .site {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-cntt {
+    width: 60%;
+}
+
+.formulario-cntt form {
+    display: flex;
+    flex-direction: column;
+    background: #041032;
+    border-radius: 30px;
+    padding: 20px 0;
+}
+
+.formulario-cntt form div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-cntt form div:first-child input {
+    width: 40%;
+}
+
+.formulario-cntt div {
+    margin: 10px 30px;
+}
+
+.formulario-cntt input,
+.formulario-cntt textarea {
+    font-size: 1.8em;
+    border: 0;
+    outline: none;
+    border-radius: 15px;
+    width: 92.662%;
+    height: 50px;
+    padding: 10px 22px;
+    border: 3px solid #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.botoes-cntt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario-cntt div button {
+    border-radius: 20px;
+    padding: 10px 0px !important;
+    padding: 0;
+    background: #fff;
+    color: #011826;
+    width: 44.9438202247191%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.8em;
+    cursor: pointer;
+    border: 3px #fff solid;
+    transition: background linear .8s, color .5s;
+}
+
+.formulario-cntt div button:hover {
+    background: #011826;
+    color: #fff;
+    border: 3px #fff solid;
+}
+
+.formulario-cntt textarea {
+    resize: none;
+    height: 100px;
+}
+
+.formulario-cntt input [type=submit] {
+    width: 100px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.formulario-cntt input::placeholder,
+.formulario-cntt textarea::placeholder {
+    color: #011826;
+}
+
+.campo-obrigatorio-cntt {
+    color: #04324C;
+    border: 3px solid red !important;
+    background-color: #ffe6e6;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #A0C4E1 !important;
+    background-color: #DAEAF9;
+}
+
+.sobre-cntt {
+    margin: 100px 0;
+}
+
+.sobre-cntt h2 {
+    font-size: 2.25em;
+    margin: 20px;
+}
+
+.sobre-cntt p {
+    font-size: 1.125em;
+    margin: 20px;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.sobre-cntt>div {
+    justify-content: space-around;
+    display: flex;
+}
+
+.sobre-cntt>div>div {
+    width: 45.83333333333333%;
+}
+
+/*S E R V I Ç O S */
+
+.servicos-serv .site>h2 {
+    color: #eaeaea;
+    font-size: 2.5em;
+    padding-top: 50px;
+}
+
+.servicos-serv .site>h2::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: #eaeaea;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.center-serv h2 {
+    text-align: center;
+    color: #eaeaea;
+    font-size: 1.875em;
+}
+
+.center-serv img {
+    margin: 50px 0;
+}
+
+.center-serv p {
+    padding-bottom: 50px;
+    text-align: justify;
+    color: #eaeaea;
+    font-size: 1.125em;
+    line-height: 1.5;
+}
+
+/*SELOS*/
+
+.selos-serv h2 {
+    color: #eaeaea;
+    font-size: 2em;
+}
+
+.selos-serv h2::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: #eaeaea;
+    margin-top: 40px;
+}
+
+.selos-serv .site {
+    display: flex;
+}
+
+.selos-serv .site>div {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selos-serv .site>div:nth-child(2) {
+    margin: 0 20px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selos-serv .site h3 {
+    color: #eaeaea;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1.6875em;
+}
+
+.selos-serv .site p {
+    color: #eaeaea;
+    padding: 20px;
+    text-align: start;
+}
+
+.selos-serv img {
+    padding-top: 30px;
+}
+
+/*BANNER*/
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/banner.png) no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 670px;
+    margin-top: -80px;
+    background-color: rgba(1, 3, 6, 0.5);
+    background-blend-mode: multiply;
+}
+
+.banner>div {
+    text-align: left;
+    color: #fff;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.banner .noto {
+    font-size: 1.75em;
+}
+
+.banner .roboto {
+    font-size: 2.5em;
+}
+
+.banner .robotoBold {
+    font-size: 5em;
+}
+
+/*CONTATO*/
+
+.contato {
+    background: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato>div {
+    margin: 50px 0;
+    display: flex;
+}
+
+.contato div>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contato div>div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato .robotoBold:first-child {
+    display: flex;
+    font-size: 2.25em;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.contato div div:first-child div p {
+    flex-grow: 1;
+    margin: 83px 0;
+}
+
+.contato .noto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+    text-align: center;
+    width: 78%;
+    line-height: 1.2;
+}
+
+.contato div>div:first-child input {
+    font-size: 1.2em;
+    border: none;
+    background: #011826;
+    color: #fff;
+    width: 50%;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background linear .8s, color .5s;
+}
+
+.contato div>div:first-child input:hover {
+    background: #fff;
+    color: #011826;
+    border: 3px #011826 solid;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario div {
+    margin: 7px 30px;
+}
+
+.formulario input,
+.formulario textarea {
+    font-size: 1.8em;
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    width: 87.553%;
+    height: 50px;
+    padding: 10px 22px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+}
+
+.formulario div button {
+    font-size: 1.2em;
+    border-radius: 20px;
+    padding: 12px 0px;
+    background: #011826;
+    color: #fff;
+    width: 40%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    cursor: pointer;
+    border: 3px #011826 solid;
+    transition: background linear .8s, color .5s;
+}
+
+.formulario div button:hover {
+    background: #fff;
+    color: #011826;
+    border: 3px #011826 solid;
+}
+
+.formulario textarea {
+    resize: none;
+    height: 100px;
+}
+
+.formulario input[type=submit] {
+    width: 100px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #011826;
+}
+
+.campo-obrigatorio {
+    color: #04324C;
+    border: 3px solid red !important;
+    background-color: #ffe6e6;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #A0C4E1 !important;
+    background-color: #DAEAF9;
+}
+
+/*SERVIÇOS*/
+
+.servicos {
+    padding: 75px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #041032;
+    background-image: linear-gradient(135deg, #041032 50%, #080715 100%);
+}
+
+.servicos>div {
+    display: flex;
+
+}
+
+.servicos .site>div:first-child {
+    width: 37.5%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.servBase1 div:first-child {
+    font-size: 1.625em;
+    width: 75.9%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.servBase1 div:nth-child(2) {
+    font-size: 2.5em;
+    margin: 30px 0;
+    color: #fff;
+}
+
+.servBase1 div:nth-child(3) {
+    width: 79%;
+    padding-bottom: 100px;
+    font-size: 1.3125em;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.servBase1 input {
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    border: none;
+    background: #bf0600;
+    color: #eaeaea;
+    width: 61%;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background linear .8s, color .5s;
+}
+
+.servBase1 input:hover {
+    background: #eaeaea;
+    color: #bf0600;
+    border: 3px #bf0600 solid;
+}
+
+.servBase2 {
+    color: #fff;
+}
+
+.servBase2 {
+    display: flex;
+    width: 62.5%;
+    flex-wrap: wrap;
+    padding: 12px 0;
+}
+
+.servBase2>div {
+    background: #efefef;
+    height: auto;
+    width: 46.66666666666667%;
+    margin: 10px;
+}
+
+.servBase2 div div:first-child {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #041032;
+    font-size: 1.4375em;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.servBase2 div div:last-child {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.servBase2>div:nth-child(1) p {
+    color: #041032;
+    font-size: 1.125em;
+    display: flex;
+    text-align: start;
+    width: 82%;
+    line-height: 1.15;
+}
+
+.servBase2>div:nth-child(2) p {
+    color: #041032;
+    font-size: 1.125em;
+    display: flex;
+    text-align: start;
+    width: 89%;
+    line-height: 1.15;
+}
+
+.servBase2>div:nth-child(3) p {
+    color: #041032;
+    font-size: 1.125em;
+    display: flex;
+    text-align: start;
+    width: 86%;
+    line-height: 1.1;
+}
+
+.servBase2>div:nth-child(4) p {
+    color: #041032;
+    font-size: 1.125em;
+    display: flex;
+    text-align: start;
+    width: 83%;
+    line-height: 1.15;
+}
+
+.servBase2 div:nth-child(1)>div:nth-child(1):before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: #041032;
+    background-image: url(../img/icon1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    border-radius: 15%;
+}
+
+.servBase2 div:nth-child(2) div:nth-child(1)::before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: #041032;
+    background-image: url(../img/icon2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    border-radius: 15%;
+}
+
+.servBase2 div:nth-child(3) div:nth-child(1)::before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: #041032;
+    background-image: url(../img/icon3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    border-radius: 15%;
+}
+
+.servBase2 div:nth-child(4) div:nth-child(1)::before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: #041032;
+    background-image: url(../img/icon4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    border-radius: 15%;
+}
+
+.servBase2 div:first-child {
+    border-radius: 20px 0 0 0;
+}
+
+.servBase2 div:nth-child(2) {
+    border-radius: 0 20px 0 0;
+}
+
+.servBase2 div:nth-child(3) {
+    border-radius: 0 0 0 20px;
+}
+
+.servBase2 div:nth-child(4) {
+    border-radius: 0 0 20px 0;
+}
+
+/*SELOS*/
+
+.selos {
+    background: #efefef;
+}
+
+.selos .site {
+    display: flex;
+    justify-content: space-around;
+}
+
+.selos .site>div {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selos .site>div:nth-child(2) {
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selos .site>div div:nth-child(3) {
+    display: flex;
+    justify-content: center;
+}
+
+.selos .site h2 {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1.6875em;
+}
+
+.selos .site p {
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.15;
+    color: #eaeaea;
+}
+
+/* estilos do flip card */
+
+.card:hover .card-side.front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+    transform: rotateY(0deg);
+}
+
+/* estilo do card */
+.flip-card {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-cont {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    display: flex;
+    flex-direction: column;
+    background: #eaeaea;
+    border: #041032 solid 3px;
+}
+
+.flip-card-back {
+    background: #041032;
+    transform: rotateY(180deg);
+    border: #bf0600 solid 3px;
+}
+
+/*METODOLOGIA*/
+
+.metod {
+    padding: 50px 0;
+    background-color: #041032;
+    background-image: linear-gradient(135deg, #041032 50%, #080715 100%);
+}
+
+.metod .site>div {
+    display: flex;
+}
+
+.metod .site>div:first-child div {
+    width: 50%;
+}
+
+.metod .site>div:first-child div h2 {
+    font-size: 3em;
+    color: #efefef;
+}
+
+.metod .site>div:first-child div h3 {
+    color: #efefef;
+    margin-bottom: 50px;
+}
+
+.metod a {
+    padding-bottom: 2px;
+    color: #bf0600;
+    transition: ease .5s;
+}
+
+.metod a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.metod .circulo {
+    width: 60px;
+    height: 60px;
+    background: #efefef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 50px 0;
+}
+
+.metod .site>div:nth-child(2)>div {
+    width: 25%;
+}
+
+.metod .site>div:last-child div h2 {
+    color: #efefef;
+    font-size: 1.5625em;
+    padding-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.metod .site>div:last-child div ul li {
+    color: #efefef;
+    font-size: 0.875em;
+    padding-bottom: 20px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*PROJETOS*/
+
+.projetos h2 {
+    font-size: 3.75em;
+    color: #000;
+    padding: 50px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.galeria {
+    display: flex;
+    padding: 40px 0;
+}
+
+.galeria img {
+    margin: 0 40px;
+}
+
+.galeria {
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: 'slick';
+        font-size: 45px;
+        color: #041032;
+    }
+
+    .slick-prev {
+        left: 25px;
+        z-index: 2;
+    }
+
+    .slick-next {
+        right: 45px;
+    }
+}
+
+/*FOOTER*/
+
+.contato2 {
+    background-color: #041032;
+    background-image: linear-gradient(135deg, #041032 50%, #080715 100%);
+}
+
+.contato2 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.contato2 div div:first-child {
+    width: 50%;
+    height: 140px;
+}
+
+.contato2 div div:first-child {
+    color: #fff;
+    width: 50%;
+    margin: 10px;
+    font-size: 1.4375em;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.contato2 div div:last-child {
+    width: 50%;
+    height: 140px;
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.contato2 div>div:last-child input {
+    font-size: 1.5em;
+    border: none;
+    background: #bf0600;
+    color: #eaeaea;
+    width: 41.6%;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background linear .8s, color .5s;
+}
+
+.contato2 div>div:last-child input:hover {
+    background: #eaeaea;
+    color: #bf0600;
+    border: 3px #bf0600 solid;
+}
+
+footer {
+    background: #efefef;
+}
+
+footer>div:first-child {
+    height: 220px;
+    display: flex;
+}
+
+footer div:first-child div {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+    justify-content: center;
+}
+
+footer div div div {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+footer div div div:first-child {
+    display: flex;
+    text-align: left;
+    width: 80%;
+    font-size: 1.625em;
+}
+
+footer div div div:last-child {
+    font-size: 1.125em;
+    width: 74%;
+    text-align: justify;
+}
+
+.redeSocial ul {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.redeSocial ul li:nth-child(2) {
+    margin: 0 15px;
+}
+
+.redeSocial ul li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    transition: background ease 0.5s;
+}
+
+.redeSocial ul li:hover {
+    background: #bf0600;
+}
+
+.redeSocial ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.footer {
+    background-color: #041032;
+    background-image: linear-gradient(135deg, #041032 50%, #080715 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer div {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.125em;
+    color: #fff;
+}
+
+.animate__delay-05s {
+    animation-delay: 0.5s;
+}
+
+.animate__delay-15s {
+    animation-delay: 1.5s;
+}
+
+.animate__delay-25s {
+    animation-delay: 1.5s;
+}
+
+@media (max-width: 1018px) {
+    .servicos>div {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .servicos .site>div:first-child {
+        width: 80%;
+    }
+
+    .servBase1 div:nth-child(3) {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .servBase1 input {
+        width: 45%;
+    }
+
+    .servBase2 div div:first-child {
+        margin-left: 30px;
+        font-size: 1.25em;
+        margin-top: 30px;
+    }
+
+    .servBase2>div p {
+        padding-bottom: 15px;
+    }
+
+    .servBase2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .servBase2 {
+        width: 90%;
+    }
+
+    .servBase2>div {
+        height: auto;
+        width: 46%;
+    }
+}
+
+/* 769 até 900  */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0px 20px;
+    }
+
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    header .menu {
+        width: 72%;
+        margin: 0;
+    }
+
+    header .menu ul li a {
+        font-size: 1.1em;
+    }
+
+    header button {
+        margin-left: 5px;
+    }
+
+    .banner {
+        height: 470px;
+    }
+
+    .banner .noto {
+        font-size: 1.35em;
+
+    }
+
+    .banner .roboto {
+        font-size: 2em;
+    }
+
+    .banner .robotoBold {
+        font-size: 4em;
+    }
+
+    .contato>div {
+        justify-content: center;
+    }
+
+    .contato .robotoBold:first-child {
+        font-size: 1.875em;
+    }
+
+    .contato div div:first-child div p {
+        margin: 71px 0;
+    }
+
+    .contato div>div:first-child input {
+        width: 70%;
+    }
+
+    .contato .noto {
+        width: 97%;
+        font-size: 1.3em;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        width: 85%;
+        padding: 3px 20px;
+    }
+
+    .formulario div button {
+        font-size: 1.2em;
+        width: 200px;
+    }
+
+    .servicos>div {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .servicos .site>div:first-child {
+        width: 80%;
+    }
+
+    .servBase1 div:nth-child(3) {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .servBase1 input {
+        width: 45%;
+    }
+
+    .servBase2 div div:first-child {
+        margin-left: 15px;
+        font-size: 1.25em;
+        margin-top: 15px;
+    }
+
+    .servBase2>div p {
+        padding-bottom: 15px;
+    }
+
+    .servBase2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .servBase2 {
+        width: 90%;
+    }
+
+    .servBase2>div {
+        height: auto;
+        width: 46%;
+    }
+
+    .selos .site h2 {
+        font-size: 1.25em;
+    }
+
+    .selos .site p {
+        line-height: 1.3;
+        font-size: 0.8em;
+    }
+
+    .metod .site>div {
+        justify-content: space-evenly;
+    }
+
+    .metod .site>div:nth-child(2)>div {
+        width: 23%;
+    }
+
+    .contato2 div {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .contato2 div div:first-child {
+        width: 80%;
+        font-size: 1.25em;
+        margin: 0px;
+    }
+
+    .contato2 div div:first-child {
+        height: auto;
+    }
+
+    .contato2 div div:last-child {
+        height: auto;
+        align-items: center;
+    }
+
+    .contato2 div>div:last-child input {
+        width: 65%;
+    }
+
+    footer div:first-child div {
+        align-items: center;
+    }
+
+    footer p {
+        text-align: center;
+        font-size: .8em;
+    }
+
+    footer div div div:first-child {
+        font-size: 1.375em;
+    }
+
+    .redeSocial ul {
+        width: 62%;
+    }
+}
+
+/* 361 até 768  */
+@media (max-width: 768px) {
+    header {
+        padding: 0;
+        background-color: #041032;
+        background-image: linear-gradient(135deg, #041032 50%, #080715 100%);
+    }
+
+    header .site {
+        flex-direction: row;
+    }
+
+    header .site>div {
+        flex-grow: 10;
+        justify-content: center;
+        display: flex;
+        margin-right: -80px;
+    }
+
+    header .menu ul {
+        flex-grow: unset;
+    }
+
+    header .menu {
+        justify-content: flex-start;
+        width: 60%;
+
+    }
+
+    .menu {
+        background: rgba(0, 17, 34, 0.75);
+        height: 100%;
+        position: fixed;
+        z-index: 5;
+        margin: 0;
+        top: 0;
+        right: -350px;
+        width: 50%;
+        max-width: 350px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        align-content: flex-start;
+        align-items: flex-start;
+        transition: right .5s ease-out;
+    }
+
+    .menu-ativo .menu {
+        right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: normal !important;
+    }
+
+    .menu ul li {
+        margin-bottom: 50px;
+    }
+
+    .menu ul li a {
+        color: #eaeaea;
+        font-size: 2em;
+    }
+
+    .ativo {
+        color: #fff !important;
+    }
+
+    header button {
+        margin: 20px 0;
+    }
+
+    .abrir-menu {
+        background: url(../img/menu-abrir.png) no-repeat center;
+        padding: 20px;
+        border: 0;
+        display: block;
+        margin-right: 40px;
+        cursor: pointer;
+    }
+
+    .fechar-menu {
+        background: url(../img/fechar-menu.png) no-repeat center;
+        padding: 20px;
+        border: 0;
+        display: block;
+        margin: 15px;
+        cursor: pointer;
+        background-color: #bf0600;
+        align-self: flex-start;
+        border-radius: 5px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .contato>div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato div>div {
+        width: 80%;
+    }
+
+    .contato div>div:first-child {
+        margin-bottom: 50px;
+    }
+
+    .contato .noto {
+        width: 88%;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .contato div div:first-child div p {
+        margin: 40px 0;
+    }
+
+    .contato div>div:first-child input {
+        width: 240px;
+        height: 45px;
+        font-size: 1.3em;
+    }
+
+    .formulario {
+        width: 58% !important;
+    }
+
+    .formulario div {
+        margin: 7px 0px;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .botoes {
+        width: 95%;
+    }
+
+    .formulario div button {
+        width: 46%;
+        font-size: 1em;
+    }
+
+    .projetos h2 {
+        font-size: 3em;
+        padding: 30px;
+    }
+
+    .servBase1 input {
+        width: 40%;
+        font-size: 1.125em;
+    }
+
+    .servBase2>div {
+        width: 80%;
+    }
+
+    .servBase2 {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .servBase2 div:first-child {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .servBase2 div:nth-child(2) {
+        border-radius: 0 0;
+    }
+
+    .servBase2 div:nth-child(3) {
+        border-radius: 0 0;
+    }
+
+    .servBase2 div:last-child {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .selos .site h2 {
+        font-size: 1em;
+    }
+
+    .selos .site p {
+        line-height: 1.3;
+        font-size: 0.6em;
+    }
+
+    .selos .site p {
+        width: 90%;
+        padding: 10px;
+        text-align: center;
+        line-height: 1.15;
+    }
+
+    .contato2 div div:first-child {
+        font-size: 1.125em;
+    }
+
+    div>div:last-child input {
+        font-size: 1.25em;
+    }
+
+    .servBase2>div p {
+        font-size: 1em !important;
+    }
+
+    .contato2 div>div:last-child input {
+        width: 70%;
+        font-size: 1.25em;
+    }
+
+    .servBase2 div div:first-child {
+        font-size: 1.125em;
+    }
+
+    .redeSocial ul {
+        width: 60%;
+    }
+
+    .metod .site>div:first-child div {
+        width: 80%;
+    }
+
+    .metod .site>div:first-child div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .metod .site>div:first-child div h2 {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .metod .site>div:first-child div h3 {
+        margin-bottom: 0px;
+    }
+
+    .metod .site>div:first-child div:nth-child(2) h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .metod .site>div {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .metod .site>div:nth-child(2)>div {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer>div:first-child {
+        height: auto;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    footer div:first-child div {
+        width: 70%;
+    }
+
+    footer div div div {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 533px) {
+
+    .formulario {
+        width: 80% !important;
+    }
+
+    .servBase1 div:first-child {
+        width: 100%;
+    }
+
+    .servBase1 div:nth-child(2) {
+        font-size: 2em;
+    }
+
+    .servBase1 div:nth-child(3) {
+        width: 100%;
+        font-size: 1.125em;
+    }
+
+    .servBase1 input {
+        width: 60%;
+        font-size: 1.125em;
+    }
+
+}
+
+/*   0 até 425  */
+
+@media (max-width: 425px) {
+
+    .contato>div {
+        margin: 20px;
+    }
+
+    .contato div>div:first-child input {
+        display: none;
+    }
+
+    .contato .formulario {
+        display: none;
+    }
+
+    .contato div>div:first-child {
+        margin-bottom: 0px;
+    }
+
+    .contato div div:first-child div p {
+        margin: 20px 0 0 0;
+    }
+
+    .contato .robotoBold:first-child {
+        font-size: 1.75em;
+    }
+
+    .contato .noto {
+        font-size: 1em;
+    }
+
+    .servicos {
+        padding: 20px 0;
+    }
+
+    .servBase1 div:first-child {
+        display: none;
+    }
+
+    .servBase1 div:nth-child(2) {
+        font-size: 1.25em;
+    }
+
+    .servBase1 div:nth-child(3) {
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    .servBase1 input {
+        display: none;
+    }
+
+    .servBase2 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .servBase2>div {
+        width: 90%;
+    }
+
+    .servBase2 div:first-child {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .servBase2 div:nth-child(2) {
+        border-radius: 0 0 0 0;
+    }
+
+    .servBase2 div:nth-child(3) {
+        border-radius: 0 0 0 0;
+    }
+
+    .servBase2 div:nth-child(4) {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .servBase2 h2 {
+        font-size: 1.125em !important;
+    }
+
+    .servBase2 div div:first-child {
+        font-size: 1.125em;
+    }
+
+    .servBase2>div p {
+        font-size: 0.875em !important;
+        text-align: center !important;
+        width: 90% !important;
+        line-height: 1.3 !important;
+    }
+
+    .selos {
+        display: none;
+    }
+
+    .metod {
+        padding: 20px 0;
+        background-color: #041032;
+        background-image: linear-gradient(135deg, #041032 50%, #080715 100%);
+    }
+
+    .metod .site>div:first-child div h3 {
+        display: none;
+    }
+
+    .metod .site>div:first-child div h2 {
+        font-size: 1.875em;
+        color: #efefef;
+        text-align: center;
+    }
+
+    .metod .site>div:first-child div {
+        width: 100%;
+    }
+
+    .metod .site>div:nth-child(2)>div {
+        width: 50%;
+    }
+
+    .metod .site>div:first-child div:nth-child(2) {
+        display: none;
+    }
+
+    .metod .site>div {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .metod .circulo {
+        background: #efefef;
+        margin: 10px 0 0 0;
+    }
+
+    .metod .site>div:last-child div h2 {
+        color: #efefef;
+        font-size: 1.25em;
+        padding-top: 20px;
+    }
+
+    .metod .site>div:last-child div ul li {
+        color: #efefef;
+        font-size: 0.875em;
+        padding-bottom: 10px;
+    }
+
+    .projetos h2 {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    .contato2 div div:first-child {
+        font-size: 0.6875em;
+    }
+
+    .contato2 div>div:last-child input {
+        font-size: 0.75em;
+        padding: 10px;
+        height: auto;
+    }
+
+    footer>div:first-child {
+        height: auto;
+        padding: 10px 0;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+
+    footer div:first-child div {
+        width: 38%;
+    }
+
+    footer>div:first-child>div:last-child {
+        display: none;
+    }
+
+    footer div div div:first-child {
+        font-size: 0.6875em;
+    }
+
+    footer div div div {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    footer div div div:last-child {
+        width: 100%;
+    }
+
+    footer p {
+        text-align: start;
+        font-size: .5625em;
+    }
+}
+
+/* P A G I N A - S O B R E */
+
+.pagina-sobre {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.banner-sobre {
+    margin: 50px 0;
+}
+
+.banner-sobre div {
+    background: url(../img/sobreBanner.png) no-repeat center;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-sobre h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 4.625em;
+}
+
+.sobre-sobre h2 {
+    color: #0a0826;
+    font-size: 2.5em;
+    padding-top: 50px;
+}
+
+.sobre-sobre h2::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: #011826;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.sobre-sobre p {
+    text-align: justify;
+    color: #041032;
+    line-height: 1.5;
+}
+
+.center img {
+    margin: 50px 0;
+    width: 100%;
+}
+
+.metod-sobre h2 {
+    font-size: 3em;
+    color: #011826;
+}
+
+.metod-sobre h2::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: #011826;
+    margin: 30px 0;
+}
+
+.metod-sobre summary img {
+    height: 30px;
+}
+
+.caixa-sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.caixa-sobre img {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+.caixa-sobre {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.circulo-sobre {
+    background: #0a0826;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 20px;
+}
+
+details {
+    background: #0a0826;
+    font-size: 0.875em;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+details>div {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+details[open]>div {
+    height: 240px;
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    background: #efefef;
+    font-size: 1.5625em;
+    border: 1px solid #0a0826;
+    border-radius: 20px;
+    list-style: none;
+}
+
+.caixa-sobre ul {
+    margin: 30px 20px;
+}
+
+.caixa-sobre li {
+    margin-top: 20px;
+    color: #eaeaea;
+}
+
+.mensagem-resultado {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+
+.pagina-port{
+    
+footer {
+    background: #0a0826;
+}
+
+footer>div:first-child {
+    height: auto;
+}
+
+footer>div {
+    display: flex;
+}
+
+
+footer>div:nth-child(1)>div {
+
+    color: #fff;
+    margin: 50px 0;
+    width: 50%;
+}
+
+
+footer .site div:first-child {
+    width: 58.33333333333333%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .site div:first-child h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+footer .site div:first-child p {
+    font-size: 1.125em;
+}
+
+.redeSocial ul {
+    display: flex;
+    margin: 40px 0;
+}
+
+.redeSocial ul li {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background ease 0.5s;
+}
+
+.redeSocial ul li:hover {
+    background: #bf0600;
+}
+
+.redeSocial ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+footer .site>div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuFim {
+    display: flex;
+    width: 33%;
+}
+
+.menuFim ul li {
+    margin-bottom: 30px;
+}
+
+.menuFim ul {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.menuFim ul li a {
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.menuFim ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    transition: width 0.8s ease-out;
+    color: #fff;
+}
+
+.menuFim ul li a:hover::after,
+.menuFim ul li a.ativo::after {
+    color: #fff;
+    width: 100%;
+}
+
+.menuFim ul li a:hover,
+.menuFim ul li a.ativo {
+    color: #fff;
+}
+
+.footer {
+    background: #bf0600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer div {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.875em;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+}
+
+footer>div:first-child {
+    height: auto;
+}
+
+
+.pagina-contato{
+    
+footer {
+    background: #0a0826;
+}
+
+footer>div {
+    display: flex;
+}
+
+footer>div:nth-child(1)>div {
+
+    color: #fff;
+    margin: 50px 0;
+    width: 50%;
+}
+
+footer .site div:first-child {
+    width: 58.33333333333333%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+footer .site div:first-child h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+
+footer .site div:first-child p a{
+    font-size: 1.125em;
+    text-decoration: none;
+    color: #fff;
+}
+
+.redeSocial ul {
+    display: flex;
+    margin: 40px 0;
+}
+
+.redeSocial ul li {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: background ease 0.5s;
+}
+
+.redeSocial ul li:hover {
+    background: #bf0600;
+}
+
+.redeSocial ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
+footer .site>div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuFim {
+
+    display: flex;
+    width: 33%;
+}
+
+.menuFim ul li {
+    margin-bottom: 30px;
+}
+
+.menuFim ul {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+.menuFim ul li a {
+
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.menuFim ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    transition: width 0.8s ease-out;
+    color: #fff;
+}
+
+.menuFim ul li a:hover::after,
+.menuFim ul li a.ativo::after {
+    color: #fff;
+    width: 100%;
+}
+
+
+.menuFim ul li a:hover,
+.menuFim ul li a.ativo {
+    color: #fff;
+}
+
+
+.footer {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer div {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.875em;
+    color: #000;
+
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.footer a {
+    text-decoration: none;
+}
+}
